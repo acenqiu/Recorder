@@ -358,7 +358,7 @@ var connWebM=function(){
 				};
 
 				// 每个声道回调一次
-				for (let ch = 0; ch < f32arr.length; ch++) {
+				for (var ch = 0; ch < f32arr.length; ch++) {
 					onReceive(ch, f32arr[ch]);
 				}
 			}else if(!isWebM){
@@ -1407,7 +1407,7 @@ var WebM_Extract=function(inBytes, scope){
 		if (track0.channels === 1) {
 			channels.push(arr);
 		} else {
-			for (let c = 0; c < track0.channels; c++) {
+			for (var c = 0; c < track0.channels; c++) {
 				var arr2 = [];
 				for (var i = 0; i < arr.length;) {
 					arr2.push(arr[i + c]);
